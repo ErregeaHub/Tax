@@ -128,7 +128,7 @@ async def scrape_ca(browser):
         "social_security": {"name": "CPP", "rate": 0.119, "limit": 67800}
     }
 
-def generate_sitemap(base_url="https://globaltax.io"):
+def generate_sitemap(base_url="https://tax.errhub.xyz"):
     now = datetime.datetime.now().strftime("%Y-%m-%d")
     sitemap = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>{base_url}/</loc>\n    <lastmod>{now}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>'
     os.makedirs('dist', exist_ok=True)
