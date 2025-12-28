@@ -1,0 +1,206 @@
+{
+    "metadata": {
+        "last_updated": "2025-12-29"
+    },
+    "data": {
+        "united_kingdom": {
+            "country": "United Kingdom",
+            "currency": "GBP",
+            "effective_year": "2025/2026",
+            "terminology": {
+                "income_tax": "Income Tax",
+                "social_security": "National Insurance",
+                "pay_period": "Monthly Salary",
+                "net_pay": "Take-Home Pay"
+            },
+            "income_tax": {
+                "personal_allowance": 12570,
+                "bands": [
+                    {
+                        "name": "Personal Allowance",
+                        "threshold": "Up to \u00a312,570",
+                        "rate": 0.0
+                    },
+                    {
+                        "name": "Basic rate",
+                        "threshold": "\u00a312,571 to \u00a350,270",
+                        "rate": 0.2
+                    },
+                    {
+                        "name": "Higher rate",
+                        "threshold": "\u00a350,271 to \u00a3125,140",
+                        "rate": 0.4
+                    },
+                    {
+                        "name": "Additional rate",
+                        "threshold": "over \u00a3125,140",
+                        "rate": 0.45
+                    }
+                ]
+            },
+            "social_security": {
+                "name": "National Insurance",
+                "type": "Class 4",
+                "rates": [
+                    {
+                        "threshold": "\u00a312,570 to \u00a350,270",
+                        "rate": 0.06
+                    },
+                    {
+                        "threshold": "Over \u00a350,270",
+                        "rate": 0.02
+                    }
+                ]
+            }
+        },
+        "united_states": {
+            "country": "United States",
+            "currency": "USD",
+            "effective_year": "2025",
+            "terminology": {
+                "income_tax": "Federal Income Tax",
+                "social_security": "FICA (Self-Employment)",
+                "pay_period": "Monthly Paycheck",
+                "net_pay": "Net Pay"
+            },
+            "income_tax": {
+                "bands": [
+                    {
+                        "name": "10%",
+                        "threshold": "$0 - $11,925",
+                        "rate": 0.1
+                    },
+                    {
+                        "name": "12%",
+                        "threshold": "$11,926 - $48,475",
+                        "rate": 0.12
+                    },
+                    {
+                        "name": "22%",
+                        "threshold": "$48,476 - $103,350",
+                        "rate": 0.22
+                    },
+                    {
+                        "name": "24%",
+                        "threshold": "$103,351 - $197,300",
+                        "rate": 0.24
+                    },
+                    {
+                        "name": "32%",
+                        "threshold": "$197,301 - $250,525",
+                        "rate": 0.32
+                    },
+                    {
+                        "name": "35%",
+                        "threshold": "$250,526 - $626,350",
+                        "rate": 0.35
+                    },
+                    {
+                        "name": "37%",
+                        "threshold": "Over $626,350",
+                        "rate": 0.37
+                    }
+                ]
+            },
+            "social_security": {
+                "name": "FICA",
+                "type": "Self-Employment",
+                "rate": 0.153,
+                "base_multiplier": 0.9235
+            }
+        },
+        "australia": {
+            "country": "Australia",
+            "currency": "AUD",
+            "effective_year": "2024/2025",
+            "terminology": {
+                "income_tax": "Income Tax",
+                "social_security": "Medicare Levy",
+                "pay_period": "Fortnightly Pay",
+                "net_pay": "Take-Home"
+            },
+            "income_tax": {
+                "bands": [
+                    {
+                        "threshold": "$0 \u2013 $18,200",
+                        "rate": 0.0
+                    },
+                    {
+                        "threshold": "$18,201 \u2013 $45,000",
+                        "rate": 0.16
+                    },
+                    {
+                        "threshold": "$45,001 \u2013 $135,000",
+                        "rate": 0.3
+                    },
+                    {
+                        "threshold": "$135,001 \u2013 $190,000",
+                        "rate": 0.37
+                    },
+                    {
+                        "threshold": "Over $190,000",
+                        "rate": 0.45
+                    }
+                ]
+            },
+            "social_security": {
+                "name": "Medicare Levy",
+                "rate": 0.02
+            }
+        },
+        "canada": {
+            "country": "Canada",
+            "currency": "CAD",
+            "effective_year": "2025",
+            "terminology": {
+                "income_tax": "Federal & Provincial Tax",
+                "social_security": "CPP Contributions",
+                "pay_period": "Monthly Salary",
+                "net_pay": "Net Income"
+            },
+            "income_tax": {
+                "federal_bands": [
+                    {
+                        "threshold": "$0 - $57,375",
+                        "rate": 0.15
+                    },
+                    {
+                        "threshold": "$57,376 - $114,750",
+                        "rate": 0.205
+                    },
+                    {
+                        "threshold": "$114,751 - $177,882",
+                        "rate": 0.26
+                    },
+                    {
+                        "threshold": "$177,883 - $253,414",
+                        "rate": 0.29
+                    },
+                    {
+                        "threshold": "Over $253,414",
+                        "rate": 0.33
+                    }
+                ],
+                "ontario_bands": [
+                    {
+                        "threshold": "$0 - $52,502",
+                        "rate": 0.0505
+                    },
+                    {
+                        "threshold": "$52,503 - $105,004",
+                        "rate": 0.0915
+                    },
+                    {
+                        "threshold": "Over $105,004",
+                        "rate": 0.1116
+                    }
+                ]
+            },
+            "social_security": {
+                "name": "CPP",
+                "rate": 0.119,
+                "limit": 67800
+            }
+        }
+    }
+}
