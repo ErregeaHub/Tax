@@ -1,6 +1,6 @@
 # Project Structure & Workflow: Global Tax Engine
 
-This document outlines the architecture, automated data pipeline, and deployment-ready distribution of the Global Freelance Tax Calculator.
+This document outlines the architecture, automated data pipeline, and deployment-ready distribution of the Global Tax Engine.
 
 ## 📂 Project Structure
 
@@ -21,6 +21,7 @@ automation/
 ├── src/                 # Development source (Vite structure)
 ├── scraper.py           # 🕷️ Live Tax Scraper & Data Generator
 ├── preflight_check.py   # 🛡️ Data Integrity Guardrail
+├── indexer.py           # 🚀 Google Indexing API Automation
 ├── package.json         # Build & Script configuration
 ├── STRUCTURE.md         # 📘 This document
 └── .gitignore           # Root protection rules
@@ -36,6 +37,7 @@ automation/
 - **Dynamic Localization**: Automagically updates terminology and tax guides per region.
 
 ### 🛡️ Technical SEO (Senior Level)
+- **Indexing Automation**: Integrated `indexer.py` for instant Google Search updates via API.
 - **Multi-Region Targeting**: Implemented **hreflang** and dynamic **canonical** tags for global SEO equity.
 - **Crawl Optimization**: Optimized `robots.txt` and `sitemap.xml` for maximum indexing efficiency.
 - **Compliance Engine**: Built-in Privacy Policy and Terms of Service for Google AdSense approval.
@@ -56,9 +58,23 @@ To update tax rates and ensure production stability:
 python3 scraper.py
 python3 preflight_check.py
 ```
-This updates everything in the `/dist/` folder and verifies data integrity before you push live.
 
-### 2. Frontend Preview
+### 2. Search Indexing (Optional)
+If you have a `service_account.json` configured, notify Google of the updates:
+```bash
+python3 indexer.py
+# Use --force to index regardless of date
+python3 indexer.py --force
+```
+> [!IMPORTANT]
+> **Fixing 403 Forbidden Error:** 
+> If you see "Permission denied. Failed to verify the URL ownership", you must:
+> 1. Open your `service_account.json` and copy the `client_email`.
+> 2. Go to **Google Search Console** > **Settings** > **Users and Permissions**.
+> 3. Click **Add User** and paste the email.
+> 4. Set the Permission to **Owner**.
+
+### 3. Frontend Preview
 To run the production-ready frontend locally:
 ```bash
 npm run dev
@@ -68,7 +84,7 @@ npm run dev
 
 ## 🛠 Tech Stack
 - **Frontend**: HTML5, Tailwind CSS (V4), JavaScript (ES6+).
-- **APIs**: Frankfurter API (Exchange Rates).
+- **APIs**: Frankfurter API, Google Indexing API.
 - **Data Pipeline**: Python async Playwright, BeautifulSoup4.
 - **Validation**: Strict Integrity Testing via `preflight_check.py`.
 

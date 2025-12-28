@@ -33,3 +33,6 @@ __pycache__/
 # Konfigurasi Environment
 .env
 venv/
+
+# Secrets
+service_account.json
